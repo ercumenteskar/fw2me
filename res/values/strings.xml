@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<string name="banner_ad_unit_id">ca-app-pub-5003722913489978/8925549640</string>
+    
+    <string name="app_name">FW2me</string>
+    <string name="action_register">Register</string>
+    <string name="bt_register">Click For Register</string>
+    <string name="btOk">Ok</string>
+    <string name="btCancel">Cancel</string>
+    <string name="btCopy">Copy</string>
+    <string name="firstSenderName">First Sender\'s Name</string>
+    <string name="emailaddresscopied">E-mail address copied</string>
+    <string name="action_login">Login</string>
+    <string name="bt_login">I Have An Account</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Quit</string>
+    <string name="action_mymailsenders">Mail Senders</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="password2">Password (Again)</string>
+    <string name="action_myhiddenmails">To Mails</string>
+    <string name="action_help">Help</string>
+    <string name="btActive1">Set Activate</string>
+    <string name="btActive2">Set Inactive</string>
+    <string name="lbActive">(Inactive)</string>
+    <string name="title">Title</string>
+    <string name="undefined">Undefined</string>
+    <string name="addnewmail">Create New E-Mail</string>
+    <string name="SenderPaused">Sender blocked. You wont receive any email from %s</string>
+    <string name="SenderResume">Block removed. You can receive email from %s</string>
+    <string name="Name">Name</string>
+    <string name="fw2meemail">For sent e-mail</string>
+    <string name="CreatedDT">Create Date</string>
+    <string name="NoMyMail">You didn\'t create a mail yet. For create a new one touch + sign.</string>
+    <string name="NoSender">No incoming e-mail for this address yet.</string>
+    <string name="YourMails">Your mails</string>
+    
+</resources>

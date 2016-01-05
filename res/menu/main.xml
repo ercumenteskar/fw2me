@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mymails.MainActivity" >
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_plus"
+        android:orderInCategory="100"
+        android:title="@string/addnewmail"
+        app:showAsAction="always">
+    </item>
+    <!-- <item -->
+    <!-- android:id="@+id/action_mymails" -->
+    <!-- android:orderInCategory="100" -->
+    <!-- android:title="@string/action_mymails" -->
+    <!-- app:showAsAction="never"/> -->
+    <!-- <item -->
+    <!-- android:id="@+id/action_myhiddenmails" -->
+    <!-- android:orderInCategory="100" -->
+    <!-- android:title="@string/action_myhiddenmails" -->
+    <!-- app:showAsAction="never"/> -->
+    <!-- <item -->
+    <!-- android:id="@+id/action_settings" -->
+    <!-- android:orderInCategory="100" -->
+    <!-- android:title="@string/action_settings" -->
+    <!-- app:showAsAction="never"/> -->
+    <!-- <item -->
+    <!-- android:id="@+id/action_help" -->
+    <!-- android:orderInCategory="100" -->
+    <!-- android:title="@string/action_help" -->
+    <!-- app:showAsAction="never"/> -->
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="1000"
+        android:title="@string/action_logout"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,109 @@
+<LinearLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" >
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/firstSenderName"
+            android:maxLength="50"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:editable="false"
+            android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:weightSum="1.0">
+        
+        <Button
+            android:id="@+id/btCopy"
+            android:text="@string/btCopy" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textColor="#FFFFFFFF"/>
+
+        <Button
+            android:id="@+id/btOk"
+            android:text="@string/btOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5" 
+            android:textColor="#FFFFFFFF"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:weightSum="1.0">
+        
+    <Button
+            android:id="@+id/btActive"
+            android:text="@string/btActive1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textColor="#FFFFFFFF"/>
+             
+
+        <Button
+            android:id="@+id/btSenders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_mymailsenders"
+            android:layout_weight=".5" 
+            android:textColor="#FFFFFFFF"/>
+        
+        
+    </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewMailAdded"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            android:visibility="visible"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+</LinearLayout>
+    
+</LinearLayout>

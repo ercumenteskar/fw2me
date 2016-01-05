@@ -1,0 +1,111 @@
+<LinearLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" >
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/tvSenderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etSenderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvSenderEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etSenderEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvFW2meEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fw2meemail"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etFW2meEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvSenderCreatedDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CreatedDT"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etSenderCreatedDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <Button
+                android:id="@+id/btFW2meEMailCopy"
+                android:text="@string/btCopy" 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#FFFFFFFF"
+                />
+
+            <Button
+                android:id="@+id/btActive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_weight="0.5"
+                android:textColor="#FFFFFFFF"
+                />
+        </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewSenderDetail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            android:visibility="visible"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+        </LinearLayout>
+
+</LinearLayout>

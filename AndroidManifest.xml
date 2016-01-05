@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fw2me.mymails"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+    <!-- Required permission to check licensing. -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    
+    <permission android:name="com.fw2me.mymails.permission.C2D_MESSAGE"
+            android:protectionLevel="signature" />
+<uses-permission android:name="com.fw2me.mymails.permission.C2D_MESSAGE" />
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+    
+
+    <application
+        
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:name="GoogleAnalyticsApp"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+		<receiver
+            android:name="com.fw2me.mymails.PushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+ 
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+ 
+                <category android:name="com.fw2me.mymails" />
+            </intent-filter>
+        </receiver>
+ 
+        <service android:name="com.fw2me.mymails.PushReceiver" />
+ 
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+        
+        <activity
+            android:name="com.fw2me.mymails.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fw2me.mymails.Register"
+            android:label="@string/action_register" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.fw2me.mymails.Login"
+            android:label="@string/action_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.fw2me.mymails.MyMailsActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.fw2me.mymails.MailAddedActivity" 
+            android:screenOrientation="portrait">
+            <meta-data
+	        android:name="android.support.PARENT_ACTIVITY"
+	        android:value="com.fw2me.mymails.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.fw2me.mymails.MyMailSenders"
+            android:label="@string/action_mymailsenders" 
+            android:screenOrientation="portrait">
+            <meta-data
+	        android:name="android.support.PARENT_ACTIVITY"
+	        android:value="com.fw2me.mymails.MailAddedActivity" />
+        </activity>
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.fw2me.mymails.SenderDetail" 
+            android:screenOrientation="portrait">
+            <meta-data
+	        android:name="android.support.PARENT_ACTIVITY"
+	        android:value="com.fw2me.mymails.MyMailSenders" />
+        </activity>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<!-- ikon -->
+   <color name="ColorPrimary">#2360B1</color>
+   <color name="ColorPrimaryDark">#1A237E</color>
+   <color name="windowBackground">#E3F2FD</color>
+<!-- Light Blue -->
+<!--     <color name="ColorPrimary">#03A9F4</color> -->
+<!--     <color name="windowBackground">#E1F5FE</color> -->
+<!-- Blue -->
+<!--    <color name="ColorPrimary">#2196F3</color>-->
+<!--    <color name="windowBackground">#E3F2FD</color>-->
+<!-- Indigo -->
+<!--     <color name="ColorPrimary">#3F51B5</color> -->
+<!--     <color name="windowBackground">#E8EAF6</color> -->
+<!-- Deep Purple -->
+<!--     <color name="ColorPrimary">#673AB7</color> -->
+<!--     <color name="windowBackground">#EDE7F6</color> -->
+<!-- Blue Grey -->
+<!--     <color name="ColorPrimary">#607D8B</color> -->
+<!--     <color name="windowBackground">#ECEFF1</color> -->
+<!-- Grey -->
+<!--     <color name="ColorPrimary">#9E9E9E</color> -->
+<!--     <color name="windowBackground">#FAFAFA</color> -->
+<!-- Red -->
+<!--     <color name="ColorPrimary">#F44336</color> -->
+<!--     <color name="windowBackground">#FFEBEE</color> -->
+</resources>
+ 
