@@ -7,8 +7,9 @@ import java.util.Locale;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
-import android.app.ActionBar.LayoutParams;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +17,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -24,7 +26,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -32,7 +33,6 @@ import android.widget.TextView;
 
 import com.fw2me.mymails.GoogleAnalyticsApp.TrackerName;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
@@ -57,8 +57,6 @@ public class MainActivity extends ActionBarActivity {
 	private static final String	       TAG_Active	                      = "Active";
 	private static final String	       TAG_CreatedDT	                  = "CreatedDT";
 	private static final String	       const_maildomain	                = "fw2.me";	                                   // "benim.in";
-
-	public static final String	       Cookies	                        = "Cookies";
 
 	ListView	                         lv	                              = null;
 	JSONArray	                         conns	                          = null;
@@ -102,9 +100,9 @@ public class MainActivity extends ActionBarActivity {
 		});
 
 		AdView mAdView = (AdView) findViewById(R.id.adViewMain);
-		AdRequest adRequest = new AdRequest.Builder().build();
-//		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-//		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
+//		AdRequest adRequest = new AdRequest.Builder().build();
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
 		mAdView.loadAd(adRequest);
 		Tracker t = ((GoogleAnalyticsApp) getApplication())
 		    .getTracker(TrackerName.APP_TRACKER);
@@ -139,7 +137,8 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		new GetPushTokenTask().execute();
+		if (uls.getUserLoggedIn())
+		  new GetPushTokenTask().execute();
 		if ((tazele)) // (GetPushTokenTask()!="") &&
 		{
 			new servisAT().execute("GetMyMailList?");
@@ -356,15 +355,15 @@ public class MainActivity extends ActionBarActivity {
 	protected String doInBackground(Object... params) {
 		String token = "";
 		try {
-			SharedPreferences sp = context.getSharedPreferences(Cookies, 0);
 			if (checkPlayServices()) {//GOOGLE PLAY SERVÝCE APK YÜKLÜMÜ
 				if (gcm==null)
 	        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());//GoogleCloudMessaging objesi oluþturduk
 	      token = getRegistrationId(getApplicationContext()); //registration_id olup olmadýðýný kontrol ediyoruz
+	      token = "";
 	      if(token.isEmpty())
 		      token = gcm.register(PROJECT_ID);
 		    else token="";
-	    } else token = "No Google Play Services";
+	    } else token = "";
 		} catch (Exception e2) {
 			token = e2.toString();
 		}
@@ -376,9 +375,9 @@ public class MainActivity extends ActionBarActivity {
 			if ((!token.startsWith("-")) && (!token.equals("")) && (token != null)) {
 				new servisAT().execute("SetUserInfo_Str?Field=PushToken&_value="
 				    + token);
-				SharedPreferences.Editor editor = context.getSharedPreferences(Cookies,
+				SharedPreferences.Editor editor = context.getSharedPreferences(GlobalTools.Cookies,
 				    Context.MODE_PRIVATE).edit();
-				editor.putString(PROPERTY_REG_ID, token);
+				editor.putString(PROPERTY_REG_ID+":"+userNo(), token);
 				editor.putInt(PROPERTY_APP_VERSION,
 				    getAppVersion(getApplicationContext()));
 				editor.commit();
@@ -404,9 +403,9 @@ public class MainActivity extends ActionBarActivity {
 
 	private String getRegistrationId(Context context) { // registration_id geri
 																											// döner
-		final SharedPreferences prefs = getSharedPreferences(Cookies,
+		final SharedPreferences prefs = getSharedPreferences(GlobalTools.Cookies,
 		    Context.MODE_PRIVATE);
-		String registrationId = prefs.getString(PROPERTY_REG_ID, "");
+		String registrationId = prefs.getString(PROPERTY_REG_ID+":"+userNo(), "");
 		if (registrationId.isEmpty()) {
 			Log.i(TAG, "Registration id bulunamadý.");
 			return "";
@@ -435,4 +434,6 @@ public class MainActivity extends ActionBarActivity {
 			throw new RuntimeException("Paket versiyonu bulunamadý: " + e);
 		}
 	}
+
+	
 }

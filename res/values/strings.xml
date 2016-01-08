@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<string name="banner_ad_unit_id">ca-app-pub-5003722913489978/8925549640</string>
-    
+	<string name="adViewMain_unit_id">ca-app-pub-5003722913489978/8925549640</string>
+	<string name="adViewMailAdded_unit_id">ca-app-pub-5003722913489978/1118553640</string>
+	<string name="adViewSenderList_unit_id">ca-app-pub-5003722913489978/2595286843</string>
+	<string name="adViewSenderDetail_unit_id">ca-app-pub-5003722913489978/4072020045</string>
+		
     <string name="app_name">FW2me</string>
     <string name="action_register">Register</string>
     <string name="bt_register">Click For Register</string>
-    <string name="btOk">Ok</string>
+    <string name="btOk">OK</string>
     <string name="btCancel">Cancel</string>
     <string name="btCopy">Copy</string>
     <string name="firstSenderName">First Sender\'s Name</string>
@@ -18,9 +21,9 @@
     <string name="action_mymailsenders">Mail Senders</string>
     <string name="email">E-Mail</string>
     <string name="password">Password</string>
-    <string name="password2">Password (Again)</string>
+    <string name="password2">Password (Again)</string> 
     <string name="action_myhiddenmails">To Mails</string>
-    <string name="action_help">Help</string>
+    <string name="action_help">Help</string> 
     <string name="btActive1">Set Activate</string>
     <string name="btActive2">Set Inactive</string>
     <string name="lbActive">(Inactive)</string>

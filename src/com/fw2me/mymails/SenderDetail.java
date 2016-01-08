@@ -94,14 +94,14 @@ public class SenderDetail extends ActionBarActivity {
           }
         });
 		AdView mAdView = (AdView) findViewById(R.id.adViewSenderDetail);
-		AdRequest adRequest = new AdRequest.Builder().build();
-//		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-//		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
+//		AdRequest adRequest = new AdRequest.Builder().build();
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
 		mAdView.loadAd(adRequest);
 
     Tracker t = ((GoogleAnalyticsApp) getApplication())
         .getTracker(TrackerName.APP_TRACKER);
-    t.setScreenName("Sender Detail");
+    t.setScreenName("Mail Gönderen Detay");
     t.enableAdvertisingIdCollection(true);
     t.send(new HitBuilders.AppViewBuilder().build());
   }
@@ -136,12 +136,12 @@ public class SenderDetail extends ActionBarActivity {
 
     protected void onPreExecute() {
       super.onPreExecute();
-			Log.i("hata bu mu", "baþlýyor");
+			//Log.i("hata bu mu", "baþlýyor");
 			if (SenderDetail.this!=null)
 			 PleaseWait = ProgressDialog.show(SenderDetail.this,
 			     "Lütfen Bekleyiniz...", "Lütfen Bekleyiniz...");
 			else Log.i("hata bu mu", "MyMailSenders.this is NULLLL");
-			Log.i("hata bu mu", "Baþarýlý");
+			//Log.i("hata bu mu", "Baþarýlý");
     }
 
     @Override

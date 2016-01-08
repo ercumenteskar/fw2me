@@ -9,25 +9,24 @@
             android:orientation="vertical"
             android:layout_above="@+id/footerLayout">
         <!-- Put all your application views here, such as buttons, textviews, edittexts and so on -->
-<include
-    android:id="@+id/tool_bar"
-    layout="@layout/tool_bar" >
-</include>
-    <TextView 
-         android:id="@+id/tvNoMyMail"
-         android:text="@string/NoMyMail"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:textSize="20sp"
-         android:layout_gravity="center_horizontal"
-         android:visibility="gone"
-         />
-    <ListView
-        android:id="@+id/lvMyMails"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
-    
+	<include
+	    android:id="@+id/tool_bar"
+	    layout="@layout/tool_bar" >
+	</include>
+	    <TextView 
+	         android:id="@+id/tvNoMyMail"
+	         android:text="@string/NoMyMail"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:textSize="20sp"
+	         android:layout_gravity="center_horizontal"
+	         android:visibility="gone"
+	         />
+	    <ListView
+	        android:id="@+id/lvMyMails"
+	        android:layout_width="match_parent"
+	        android:layout_height="fill_parent" >
+	    </ListView>
     </LinearLayout>
     <LinearLayout
             android:id="@+id/footerLayout"
@@ -45,7 +44,7 @@
         android:layout_height="wrap_content"
         ads:adSize="BANNER"
         android:visibility="visible"
-        ads:adUnitId="@string/banner_ad_unit_id" />
+        ads:adUnitId="@string/adViewMain_unit_id" />
     </LinearLayout>
 </RelativeLayout>
 

@@ -22,7 +22,6 @@
 	         android:layout_gravity="center_horizontal"
 	         android:visibility="gone"
 	         />
-
         <ListView
             android:id="@+id/lvMyMailSenders"
             android:layout_width="match_parent"
@@ -45,6 +44,6 @@
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
             android:visibility="visible"
-            ads:adUnitId="@string/banner_ad_unit_id" />
+            ads:adUnitId="@string/adViewSenderList_unit_id" />
     </LinearLayout>
 </RelativeLayout>

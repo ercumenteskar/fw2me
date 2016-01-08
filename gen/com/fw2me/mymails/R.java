@@ -2092,13 +2092,16 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020052;
         public static final int ic_launcher72=0x7f020053;
         public static final int ic_launcher96=0x7f020054;
-        public static final int ic_plus=0x7f020055;
-        public static final int ic_plusone_medium_off_client=0x7f020056;
-        public static final int ic_plusone_small_off_client=0x7f020057;
-        public static final int ic_plusone_standard_off_client=0x7f020058;
-        public static final int ic_plusone_tall_off_client=0x7f020059;
-        public static final int powered_by_google_dark=0x7f02005a;
-        public static final int powered_by_google_light=0x7f02005b;
+        public static final int ic_launcher_dt=0x7f020055;
+        public static final int ic_launcher_dtx=0x7f020056;
+        public static final int ic_launcher_sb=0x7f020057;
+        public static final int ic_plus=0x7f020058;
+        public static final int ic_plusone_medium_off_client=0x7f020059;
+        public static final int ic_plusone_small_off_client=0x7f02005a;
+        public static final int ic_plusone_standard_off_client=0x7f02005b;
+        public static final int ic_plusone_tall_off_client=0x7f02005c;
+        public static final int powered_by_google_dark=0x7f02005d;
+        public static final int powered_by_google_light=0x7f02005e;
     }
     public static final class id {
         public static final int action_add=0x7f09007d;
@@ -2297,13 +2300,13 @@ containing a value of this type.
         public static final int gtm_analytics=0x7f060000;
     }
     public static final class string {
-        public static final int CreatedDT=0x7f080059;
-        public static final int Name=0x7f080057;
-        public static final int NoMyMail=0x7f08005a;
-        public static final int NoSender=0x7f08005b;
-        public static final int SenderPaused=0x7f080055;
-        public static final int SenderResume=0x7f080056;
-        public static final int YourMails=0x7f08005c;
+        public static final int CreatedDT=0x7f08005c;
+        public static final int Name=0x7f08005a;
+        public static final int NoMyMail=0x7f08005d;
+        public static final int NoSender=0x7f08005e;
+        public static final int SenderPaused=0x7f080058;
+        public static final int SenderResume=0x7f080059;
+        public static final int YourMails=0x7f08005f;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f08002d;
@@ -2361,30 +2364,32 @@ containing a value of this type.
          */
         public static final int abc_toolbar_collapse_description=0x7f080030;
         public static final int accept=0x7f080002;
-        public static final int action_help=0x7f08004e;
-        public static final int action_login=0x7f080045;
-        public static final int action_logout=0x7f080048;
-        public static final int action_myhiddenmails=0x7f08004d;
-        public static final int action_mymailsenders=0x7f080049;
-        public static final int action_register=0x7f08003e;
-        public static final int action_settings=0x7f080047;
-        public static final int addnewmail=0x7f080054;
-        public static final int already_registered=0x7f080061;
-        public static final int app_name=0x7f08003d;
+        public static final int action_help=0x7f080051;
+        public static final int action_login=0x7f080048;
+        public static final int action_logout=0x7f08004b;
+        public static final int action_myhiddenmails=0x7f080050;
+        public static final int action_mymailsenders=0x7f08004c;
+        public static final int action_register=0x7f080041;
+        public static final int action_settings=0x7f08004a;
+        public static final int adViewMailAdded_unit_id=0x7f08003d;
+        public static final int adViewMain_unit_id=0x7f08003c;
+        public static final int adViewSenderDetail_unit_id=0x7f08003f;
+        public static final int adViewSenderList_unit_id=0x7f08003e;
+        public static final int addnewmail=0x7f080057;
+        public static final int app_name=0x7f080040;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_facebook_display_name=0x7f080007;
         /**  Brand name for Google [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_google_display_name=0x7f080006;
-        public static final int banner_ad_unit_id=0x7f08003c;
-        public static final int btActive1=0x7f08004f;
-        public static final int btActive2=0x7f080050;
-        public static final int btCancel=0x7f080041;
-        public static final int btCopy=0x7f080042;
-        public static final int btOk=0x7f080040;
-        public static final int bt_login=0x7f080046;
-        public static final int bt_register=0x7f08003f;
+        public static final int btActive1=0x7f080052;
+        public static final int btActive2=0x7f080053;
+        public static final int btCancel=0x7f080044;
+        public static final int btCopy=0x7f080045;
+        public static final int btOk=0x7f080043;
+        public static final int bt_login=0x7f080049;
+        public static final int bt_register=0x7f080042;
         /**  Message of the notification to indicate an active cast display connection.  [CHAR LIMIT=80] NOTE: Same text as msgid="794424023757290105" 
          */
         public static final int cast_notification_connected_message=0x7f080009;
@@ -2509,36 +2514,17 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f080005;
         public static final int create_calendar_title=0x7f080004;
         public static final int decline=0x7f080003;
-        public static final int email=0x7f08004a;
-        public static final int emailaddresscopied=0x7f080044;
-        public static final int error_config=0x7f080060;
-        public static final int firstSenderName=0x7f080043;
-        public static final int fw2meemail=0x7f080058;
-        public static final int gcm_deleted=0x7f080067;
-        public static final int gcm_error=0x7f080065;
-        public static final int gcm_message=0x7f080064;
-        public static final int gcm_recoverable_error=0x7f080066;
-        public static final int gcm_registered=0x7f080062;
-        public static final int gcm_unregistered=0x7f080063;
-        public static final int hello_world=0x7f08005d;
-        public static final int lbActive=0x7f080051;
-        public static final int menu_settings=0x7f08005e;
-        public static final int options_clear=0x7f08006f;
-        public static final int options_exit=0x7f080070;
-        public static final int options_register=0x7f08006d;
-        public static final int options_unregister=0x7f08006e;
-        public static final int password=0x7f08004b;
-        public static final int password2=0x7f08004c;
-        public static final int server_register_error=0x7f08006b;
-        public static final int server_registered=0x7f080069;
-        public static final int server_registering=0x7f080068;
-        public static final int server_unregister_error=0x7f08006c;
-        public static final int server_unregistered=0x7f08006a;
+        public static final int email=0x7f08004d;
+        public static final int emailaddresscopied=0x7f080047;
+        public static final int firstSenderName=0x7f080046;
+        public static final int fw2meemail=0x7f08005b;
+        public static final int lbActive=0x7f080054;
+        public static final int password=0x7f08004e;
+        public static final int password2=0x7f08004f;
         public static final int store_picture_message=0x7f080001;
         public static final int store_picture_title=0x7f080000;
-        public static final int title=0x7f080052;
-        public static final int title_activity_main=0x7f08005f;
-        public static final int undefined=0x7f080053;
+        public static final int title=0x7f080055;
+        public static final int undefined=0x7f080056;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

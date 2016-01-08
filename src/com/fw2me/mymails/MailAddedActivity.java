@@ -5,8 +5,6 @@ import org.json.JSONObject;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.AvoidXfermode.Mode;
-import android.graphics.LightingColorFilter;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -103,12 +101,12 @@ public class MailAddedActivity extends ActionBarActivity {
 	    }
     });
 		AdView mAdView = (AdView) findViewById(R.id.adViewMailAdded);
-		AdRequest adRequest = new AdRequest.Builder().build();
-//		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-//		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
+//		AdRequest adRequest = new AdRequest.Builder().build();
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
 		mAdView.loadAd(adRequest);
 		Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(TrackerName.APP_TRACKER);
-		t.setScreenName("My Mail Detail");
+		t.setScreenName("Mail Detay");
 		t.enableAdvertisingIdCollection(true);
 		t.send(new HitBuilders.AppViewBuilder().build());
 	}

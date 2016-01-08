@@ -1,8 +1,11 @@
-<LinearLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <include
@@ -30,7 +33,6 @@
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/firstSenderName"
             android:maxLength="50"
             android:textSize="20sp" />
 
@@ -96,14 +98,26 @@
         
         
     </LinearLayout>
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adViewMailAdded"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            android:visibility="visible"
-            ads:adUnitId="@string/banner_ad_unit_id" />
 </LinearLayout>
     
 </LinearLayout>
+<LinearLayout
+            android:id="@+id/footerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adViewMailAdded"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/adViewMailAdded_unit_id"
+                android:visibility="visible" />
+        </LinearLayout>
+        
+</RelativeLayout>

@@ -101,9 +101,9 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 		});
 
 		AdView mAdView = (AdView) findViewById(R.id.adViewSenderList);
-		AdRequest adRequest = new AdRequest.Builder().build();
-//		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-//		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
+//		AdRequest adRequest = new AdRequest.Builder().build();
+		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
+		    "A0AC6DA8C6F5470C829C819123B7F8B2").build();
 		mAdView.loadAd(adRequest);
 
 		Tracker t = ((GoogleAnalyticsApp) getApplication())
@@ -158,12 +158,12 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 
 		protected void onPreExecute() {
 			super.onPreExecute();
-			Log.i("hata bu mu", "baþlýyor");
+			//Log.i("hata bu mu", "baþlýyor");
 			if (MyMailSenders.this!=null)
 			 PleaseWait = ProgressDialog.show(MyMailSenders.this,
 			     "Lütfen Bekleyiniz...", "Lütfen Bekleyiniz...");
 			else Log.i("hata bu mu", "MyMailSenders.this is NULLLL");
-			Log.i("hata bu mu", "Baþarýlý");
+			//Log.i("hata bu mu", "Baþarýlý");
 		}
 
 		@Override

@@ -2,13 +2,20 @@ package com.fw2me.mymails;
 
 import java.util.Locale;
 
+import android.R.bool;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
+
 public class GlobalTools {
+
+	public static final String	       Cookies	                        = "Cookies";
+	
 	public static void ShowTost(String Msg){
 		Toast.makeText(MainActivity.context, Msg, Toast.LENGTH_LONG).show();
 	}
@@ -63,5 +70,19 @@ public class GlobalTools {
 		return Rtn;
 	}
 
+	public static String ReadStringFromCookie(String Key, String isNull)
+	{
+		final SharedPreferences prefs = MainActivity.context.getSharedPreferences(Cookies, Context.MODE_PRIVATE);
+		return prefs.getString(Key, isNull);
+	}
 
+	public static String WriteStringToCookie(String Key, String Value)
+	{
+		final SharedPreferences prefs = MainActivity.context.getSharedPreferences(Cookies, Context.MODE_PRIVATE);
+		String oldValue = prefs.getString(Key, "");
+		Editor editor = prefs.edit();
+		editor.putString(Key, Value);
+		editor.commit();
+		return oldValue;
+	}
 }
