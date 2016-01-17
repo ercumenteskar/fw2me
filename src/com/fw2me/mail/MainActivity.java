@@ -158,7 +158,7 @@ public class MainActivity extends ActionBarActivity {
 		if (showAds) adView.resume();
 		if (uls.getUserLoggedIn())
 		  new GetPushTokenTask().execute();
-		if ((tazele)) // (GetPushTokenTask()!="") &&
+//		if ((tazele)) // (GetPushTokenTask()!="") &&
 		{
 			new servisAT().execute("GetMyMailList?");
 			tazele = false;
