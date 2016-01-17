@@ -1,117 +1,145 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-<LinearLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/tool_bar" >
-    </include>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SenderDetail" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin" >
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/tvSenderName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Name"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/etSenderName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:editable="false"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvSenderEMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/email"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/etSenderEMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:editable="false"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvFW2meEMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/fw2meemail"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/etFW2meEMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:editable="false"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/tvSenderCreatedDT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/CreatedDT"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/etSenderCreatedDT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:editable="false"
-            android:textSize="20sp" />
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar" >
+        </include>
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1.0" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
 
-            <Button
-                android:id="@+id/btFW2meEMailCopy"
-                android:text="@string/btCopy" 
+            <TextView
+                android:id="@+id/tvSenderName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:textColor="#FFFFFFFF"
-                />
+                android:textColor="#000000"
+                android:text="@string/Name"
+                android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btActive"
+            <EditText
+                android:id="@+id/etSenderName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
-                android:layout_weight="0.5"
-                android:textColor="#FFFFFFFF"
-                />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:textSize="20sp" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tvSenderEMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/email"
+                android:textSize="20sp" />
 
-</LinearLayout>
-<LinearLayout
-            android:id="@+id/footerLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="bottom"
-            android:orientation="horizontal" >
+            <EditText
+                android:id="@+id/etSenderEMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvFW2meEMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/fw2meemail"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etFW2meEMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvSenderCreatedDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/CreatedDT"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etSenderCreatedDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <Button
+                    android:id="@+id/btFW2meEMailCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/btCopy"
+                    android:textColor="#FFFFFFFF" />
+
+                <Button
+                    android:id="@+id/btActive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="#FFFFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <Button
+                    android:id="@+id/btInboxinSenderDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/btInbox"
+                    android:textColor="#FFFFFFFF" />
+
+                <Button
+                    android:id="@+id/btInvSpace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/btInbox"
+                    android:textColor="#FFFFFFFF"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
 
         <com.google.android.gms.ads.AdView
             xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -119,7 +147,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-            android:visibility="visible"
-            ads:adUnitId="@string/adViewSenderDetail_unit_id" />
-        </LinearLayout>
+            ads:adUnitId="@string/adViewSenderDetail_unit_id"
+            android:visibility="visible" />
+    </LinearLayout>
+
 </RelativeLayout>

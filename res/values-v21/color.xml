@@ -4,8 +4,8 @@
 <!-- ikon -->
    <color name="ColorPrimary">#2360B1</color>
    <color name="ColorPrimaryDark">#1A237E</color>
-<!--    <color name="ColorPrimaryDark">#040378</color> -->
    <color name="windowBackground">#E3F2FD</color>
+   <color name="accent">#FF0000</color>
 <!-- Light Blue -->
 <!--     <color name="ColorPrimary">#03A9F4</color> -->
 <!--     <color name="windowBackground">#E1F5FE</color> -->

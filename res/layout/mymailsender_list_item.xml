@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="5dip" >
+    android:padding="5sp" >
 
     <TextView
         android:id="@+id/tvId"
@@ -23,8 +23,7 @@
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:typeface="sans" />
+        android:textStyle="bold"/>
     
     <TextView
         android:id="@+id/tvOrjSenderName"
@@ -34,7 +33,7 @@
 
     <TextView
         android:id="@+id/tvSenderEMail"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSenderName"
         android:textColor="#000000"
@@ -42,13 +41,13 @@
 
     <TextView
         android:id="@+id/tvCreatedDT"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:gravity="right"
         android:textColor="#000000"
-        android:textSize="10dip"
+        android:textSize="10sp"
         android:textStyle="bold" />
 
 

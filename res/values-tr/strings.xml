@@ -7,13 +7,13 @@
     <string name="btOk">Tamam</string>
     <string name="btCancel">Vazgeç</string>
     <string name="btCopy">Kopyala</string>
-    <string name="firstSenderName">İlk Göndericinin Adı</string>
+    <string name="firstSenderName">İlk Bağlantının Adı</string>
     <string name="emailaddresscopied">E-Posta adresi kopyalandı</string>
     <string name="action_login">Giriş</string>
     <string name="bt_login">Zaten hesabım var</string>
     <string name="action_settings">Ayarlar</string>
     <string name="action_logout">Çıkış</string>
-    <string name="action_mymailsenders">Mail Gönderenler</string>
+    <string name="action_mymailsenders">Bağlantılar</string>
     <string name="email">E-Posta</string>
     <string name="password">Parola</string>
     <string name="password2">Parola (Tekrar)</string>
@@ -25,13 +25,27 @@
     <string name="title">Tanım</string>
     <string name="undefined">Tanımsız</string>
     <string name="addnewmail">Yeni E-Mail Oluştur</string>
-    <string name="SenderPaused">Gönderen engellendi. Artık %s adresinden e-posta almayacaksınız.</string>
+    <string name="SenderPaused">Bağlantı engellendi. Artık %s adresinden e-posta almayacaksınız.</string>
     <string name="SenderResume">Engel kaldırıldı. Artık %s adresinden e-posta alabileceksiniz.</string>
     <string name="Name">Ad</string>
     <string name="fw2meemail">E-Posta göndermek için</string>
     <string name="CreatedDT">Oluşturma Tarihi</string>
-    <string name="NoMyMail">Henüz mail oluşturmamışsınız. Oluşturmak için + işaretine dokunun.</string>
+    <string name="NoMyMail">Henüz FW2me adresi oluşturmamışsınız. Oluşturmak için + işaretine dokunun.</string>
     <string name="NoSender">Bu adresinize henüz e-mail gelmemiş.</string>
     <string name="YourMails">Adresleriniz</string>
+    <string name="PleaseWait">Lütfen bekleyiniz</string>
+    <string name="OfflineUsage">Çevrimdışı Kullanım</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="eMailConfReqTitle">E-Mail onayı gerekiyor</string>
+    <string name="eMailConfReqDesc">Mail adresinize onay maili gönderildi. FW2me adresi oluşturabilmek için bu mail içerisindeki linke tıklamanız gerekmektedir. Onay mailinin yeniden gönderilmesini ister misiniz? (Önceki onay maili geçersiz olacaktır)</string>
+    <string name="btInbox">Gelen Kutusu</string>
+    <string name="MailForwarded">Mail adresinize gönderildi!</string>
+    <string name="tvInboxHeaderFromTitle">Gönderen : </string>
+    <string name="tvInboxHeaderToTitle">Alıcı : </string>
+    <string name="tvInboxHeaderCountTitle">E-Mail Sayısı : </string>
+    <string name="tvInboxHeader">Adresinize yönlendirmek istediğiniz maili seçebilirsiniz</string>
+    <string name="btForgotPassword">Parolanızı mı unuttunuz?</string>
+    <string name="ResetPasswordLink">Parolanızı sıfırlamanız için mail gönderilmiştir</string>
     
 </resources>

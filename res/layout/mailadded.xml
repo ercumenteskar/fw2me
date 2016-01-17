@@ -26,6 +26,7 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="@string/title"
             android:textSize="20sp" />
 
@@ -40,6 +41,7 @@
             android:id="@+id/tvEMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="@string/email"
             android:textSize="20sp" />
 
@@ -94,6 +96,31 @@
             android:layout_height="wrap_content"
             android:text="@string/action_mymailsenders"
             android:layout_weight=".5" 
+            android:textColor="#FFFFFFFF"/>
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:weightSum="1.0">
+        
+        <Button
+            android:id="@+id/btInboxinMailAdded"
+            android:text="@string/btInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:textColor="#FFFFFFFF"/>
+        
+        <Button
+            android:id="@+id/btInvSpace"
+            android:text="@string/btInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:visibility="invisible"
             android:textColor="#FFFFFFFF"/>
         
         

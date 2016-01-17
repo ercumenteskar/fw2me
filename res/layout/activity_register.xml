@@ -2,16 +2,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical|center_horizontal"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="300sp"
+            android:layout_height="150sp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/banner2"
+        />
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:orientation="vertical" >
-
+        android:orientation="vertical" 
+	    android:paddingLeft="10dp" 
+	    android:paddingRight="10dp" 
+	    android:paddingBottom="10dp" 
+		android:gravity="center_vertical"
+		>
         <TextView
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email" />
@@ -23,6 +40,7 @@
             android:inputType="textEmailAddress" />
 
         <TextView
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/password" />
@@ -34,6 +52,7 @@
             android:inputType="textPassword" />
 
         <TextView
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/password2" />
@@ -55,6 +74,7 @@
 
         <TextView
             android:id="@+id/btLogin"
+            android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal"

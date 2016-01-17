@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fw2me.mail.Inbox" >
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:orientation="vertical" >
+
+        <!-- Put all your application views here, such as buttons, textviews, edittexts and so on -->
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar" >
+        </include>
+
+        <RelativeLayout
+            android:id="@+id/layout_InboxHeaderFrom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="2sp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvInboxHeaderFromTitle"
+                android:text="@+string/tvInboxHeaderFromTitle"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5sp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvInboxHeaderFrom"
+                android:layout_toRightOf="@+id/tvInboxHeaderFromTitle"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_InboxHeaderTo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="2sp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvInboxHeaderToTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@+string/tvInboxHeaderToTitle"
+                android:textColor="#000000"
+                android:paddingRight="5sp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+			<TextView
+                android:id="@+id/tvInboxHeaderTo"
+                android:layout_toRightOf="@+id/tvInboxHeaderToTitle"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="2sp">
+
+            <TextView
+                android:id="@+id/tvInboxHeaderCountTitle"
+                android:text="@+string/tvInboxHeaderCountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:paddingRight="5sp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvInboxHeaderCount"
+                android:layout_toRightOf="@+id/tvInboxHeaderCountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvInboxHeader"
+            android:text="@+string/tvInboxHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" 
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/lvInbox"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewInbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/adViewInbox_unit_id"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>
