@@ -60,7 +60,7 @@
             android:id="@+id/btLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="17sp"
             android:text="@string/action_login" 
             android:textColor="#FFFFFFFF"/>
 
@@ -69,12 +69,20 @@
             android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="5sp"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/btForgotPassword"
             android:textSize="@dimen/abc_text_size_medium_material"
             android:textStyle="bold" />
         
+        <ImageView 
+            android:id="@+id/iv_seperator"
+            android:layout_width="fill_parent"
+            android:layout_height="3sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5sp"
+            android:src="@drawable/seperator_h"/>
+
         <TextView
             android:id="@+id/btRegister"
             android:textColor="#000000"

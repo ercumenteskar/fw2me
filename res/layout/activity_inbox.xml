@@ -103,6 +103,26 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp" 
+            android:textColor="#2360B1"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tvInboxHeader2"
+            android:text="@+string/tvInboxHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" 
+            android:textColor="#1A237E"
+            android:visibility="gone"/>
+
+                <TextView
+            android:id="@+id/tvInboxHeader3"
+            android:text="@+string/tvInboxHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" 
+            android:textColor="#FF0000"
             android:visibility="gone"/>
 
         <ListView

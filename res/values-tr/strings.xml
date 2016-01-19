@@ -44,8 +44,13 @@
     <string name="tvInboxHeaderFromTitle">Gönderen : </string>
     <string name="tvInboxHeaderToTitle">Alıcı : </string>
     <string name="tvInboxHeaderCountTitle">E-Mail Sayısı : </string>
-    <string name="tvInboxHeader">Adresinize yönlendirmek istediğiniz maili seçebilirsiniz</string>
+    <string name="tvInboxHeader">Adresinize yönlendirmek istediğiniz maili seçiniz</string>
     <string name="btForgotPassword">Parolanızı mı unuttunuz?</string>
     <string name="ResetPasswordLink">Parolanızı sıfırlamanız için mail gönderilmiştir</string>
+    <string name="scr_MainActivity">Ana Ekran</string>
+    <string name="scr_Inbox">Gelen Kutusu</string>
+    <string name="scr_MailAddedActivity">Mail Detay</string>
+    <string name="scr_MyMailSenders">Bağlantılar</string>
+    <string name="scr_SenderDetail">Bağlantı Detay</string>
     
 </resources>

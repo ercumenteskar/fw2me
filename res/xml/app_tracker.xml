@@ -11,14 +11,12 @@
 
   <bool name="ga_debug">true</bool>
 
-  <item name="ga_dispatchPeriod" format="integer" type="integer">120</item>
-
-  <string name="ga_sampleFrequency">90</string>
+  <item name="ga_dispatchPeriod" format="integer" type="integer">30</item>
 
   <bool name="ga_anonymizeIp">true</bool>
   <bool name="ga_dryRun">false</bool>
 
-  <string name="ga_sampleFrequency">100.0</string>
+  <string name="ga_sampleFrequency">5</string>
 
   <integer name="ga_sessionTimeout">-1</integer>
 

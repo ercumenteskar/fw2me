@@ -49,8 +49,13 @@
     <string name="tvInboxHeaderFromTitle">From : </string>
     <string name="tvInboxHeaderToTitle">To : </string>
     <string name="tvInboxHeaderCountTitle">E-Mail Count : </string>
-    <string name="tvInboxHeader">Select for FW to your real mail.</string>
+    <string name="tvInboxHeader">You can choose to e-mail you want to FW</string>
     <string name="btForgotPassword">Forgot your password?</string>
     <string name="ResetPasswordLink">Your password reset mail has been sent</string>
-
+    <string name="scr_MainActivity">Main Screen</string>
+    <string name="scr_Inbox">Inbox</string>
+    <string name="scr_MailAddedActivity">Mail Detail</string>
+    <string name="scr_MyMailSenders">Contact List</string>
+    <string name="scr_SenderDetail">Contact Detail</string>
+        
 </resources>
