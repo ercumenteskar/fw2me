@@ -9,7 +9,6 @@ import com.google.android.gms.analytics.Tracker;
 
 public class GoogleAnalyticsApp extends Application {
 
-	//private static final String PROPERTY_ID = "UA-70530711-1";
 	@Override
   public void onCreate() {
      super.onCreate();

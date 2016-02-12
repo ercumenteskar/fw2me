@@ -2,11 +2,13 @@ package com.fw2me.mail;
 
 import org.json.JSONObject;
 
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -73,7 +75,7 @@ public class MailAddedActivity extends ActionBarActivity {
     });
 		((Button) findViewById(R.id.btCopy))
     .setOnClickListener(new OnClickListener() {
-	    @Override
+	    @TargetApi(Build.VERSION_CODES.HONEYCOMB) @Override
 	    public void onClick(View v) {
 		    int sdk = android.os.Build.VERSION.SDK_INT;
 		    if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
@@ -123,7 +125,7 @@ public class MailAddedActivity extends ActionBarActivity {
     }
 
 		Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(TrackerName.APP_TRACKER);
-		t.setScreenName("Mail Detay");
+		//t.setScreenName(getResources().getString(R.string.scr_MailAddedActivity));
 		t.enableAdvertisingIdCollection(true);
 		t.send(new HitBuilders.AppViewBuilder().build());
 	}
@@ -176,7 +178,7 @@ public class MailAddedActivity extends ActionBarActivity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			 PleaseWait = ProgressDialog.show(MailAddedActivity.this,
-					 getResources().getString(R.string.PleaseWait), getResources().getString(R.string.PleaseWait));
+					 getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
 		}
 
 		@Override

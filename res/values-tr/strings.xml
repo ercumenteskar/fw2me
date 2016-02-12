@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">FW2me</string>
     <string name="action_register">Kayıt ol</string>
     <string name="bt_register">Kayıt olmak için tıklayın</string>
     <string name="btOk">Tamam</string>
     <string name="btCancel">Vazgeç</string>
     <string name="btCopy">Kopyala</string>
-    <string name="firstSenderName">İlk Bağlantının Adı</string>
     <string name="emailaddresscopied">E-Posta adresi kopyalandı</string>
     <string name="action_login">Giriş</string>
     <string name="bt_login">Zaten hesabım var</string>
-    <string name="action_settings">Ayarlar</string>
     <string name="action_logout">Çıkış</string>
     <string name="action_mymailsenders">Bağlantılar</string>
     <string name="email">E-Posta</string>
     <string name="password">Parola</string>
     <string name="password2">Parola (Tekrar)</string>
-    <string name="action_myhiddenmails">Karşı Maillerim</string>
-    <string name="action_help">Yardım</string>
     <string name="btActive1">Aktif et</string>
     <string name="btActive2">Pasif et</string>
     <string name="lbActive">(Pasif)</string>
@@ -34,6 +29,7 @@
     <string name="NoSender">Bu adresinize henüz e-mail gelmemiş.</string>
     <string name="YourMails">Adresleriniz</string>
     <string name="PleaseWait">Lütfen bekleyiniz</string>
+    <string name="Loading">Yükleniyor</string>
     <string name="OfflineUsage">Çevrimdışı Kullanım</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
@@ -47,10 +43,6 @@
     <string name="tvInboxHeader">Adresinize yönlendirmek istediğiniz maili seçiniz</string>
     <string name="btForgotPassword">Parolanızı mı unuttunuz?</string>
     <string name="ResetPasswordLink">Parolanızı sıfırlamanız için mail gönderilmiştir</string>
-    <string name="scr_MainActivity">Ana Ekran</string>
-    <string name="scr_Inbox">Gelen Kutusu</string>
-    <string name="scr_MailAddedActivity">Mail Detay</string>
-    <string name="scr_MyMailSenders">Bağlantılar</string>
-    <string name="scr_SenderDetail">Bağlantı Detay</string>
+    <string name="DemoVideo"><u>FW2me nedir? (Demo Video)</u></string>
     
 </resources>

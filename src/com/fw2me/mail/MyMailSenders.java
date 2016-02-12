@@ -113,7 +113,7 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 
 		Tracker t = ((GoogleAnalyticsApp) getApplication())
 		    .getTracker(TrackerName.APP_TRACKER);
-		t.setScreenName(this.getTitle().toString());
+		//t.setScreenName(getResources().getString(R.string.scr_MyMailSenders));
 		t.enableAdvertisingIdCollection(true);
 		t.send(new HitBuilders.AppViewBuilder().build());
 	}
@@ -173,7 +173,7 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 			// if (MyMailSenders.this!=null)
 			PleaseWait = ProgressDialog.show(MyMailSenders.this, getResources()
 			    .getString(R.string.PleaseWait),
-			    getResources().getString(R.string.PleaseWait));
+			    getResources().getString(R.string.Loading));
 			// else Log.i("hata bu mu", "MyMailSenders.this is NULLLL");
 			// Log.i("hata bu mu", "Baþarýlý");
 		}

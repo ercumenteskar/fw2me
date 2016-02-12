@@ -2100,10 +2100,11 @@ containing a value of this type.
         public static final int ic_plusone_tall_off_client=0x7f02005b;
         public static final int powered_by_google_dark=0x7f02005c;
         public static final int powered_by_google_light=0x7f02005d;
+        public static final int seperator_h=0x7f02005e;
     }
     public static final class id {
-        public static final int action_Inbox=0x7f090093;
-        public static final int action_add=0x7f090092;
+        public static final int action_Inbox=0x7f090097;
+        public static final int action_add=0x7f090096;
         public static final int action_bar=0x7f090048;
         public static final int action_bar_activity_content=0x7f090004;
         public static final int action_bar_container=0x7f090047;
@@ -2112,35 +2113,36 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f090036;
         public static final int action_bar_title=0x7f090035;
         public static final int action_context_bar=0x7f090049;
-        public static final int action_logout=0x7f090094;
+        public static final int action_logout=0x7f090098;
         public static final int action_menu_divider=0x7f090006;
         public static final int action_menu_presenter=0x7f090007;
         public static final int action_mode_bar=0x7f090045;
         public static final int action_mode_bar_stub=0x7f090044;
         public static final int action_mode_close_button=0x7f090037;
-        public static final int action_settings=0x7f090091;
+        public static final int action_settings=0x7f090095;
         public static final int activity_chooser_view_content=0x7f090038;
-        public static final int adViewInbox=0x7f090063;
-        public static final int adViewMailAdded=0x7f09007c;
-        public static final int adViewMain=0x7f09006c;
-        public static final int adViewSenderDetail=0x7f090090;
-        public static final int adViewSenderList=0x7f090087;
+        public static final int adViewInbox=0x7f090065;
+        public static final int adViewMailAdded=0x7f090080;
+        public static final int adViewMain=0x7f09006f;
+        public static final int adViewSenderDetail=0x7f090094;
+        public static final int adViewSenderList=0x7f09008b;
         public static final int adjust_height=0x7f09000a;
         public static final int adjust_width=0x7f09000b;
         public static final int always=0x7f09002b;
         public static final int beginning=0x7f090032;
         public static final int book_now=0x7f09001b;
-        public static final int btActive=0x7f090078;
-        public static final int btCopy=0x7f090076;
-        public static final int btFW2meEMailCopy=0x7f09008e;
-        public static final int btForgotPassword=0x7f090068;
-        public static final int btInboxinMailAdded=0x7f09007a;
-        public static final int btInboxinSenderDetail=0x7f09008f;
-        public static final int btInvSpace=0x7f09007b;
-        public static final int btLogin=0x7f090067;
-        public static final int btOk=0x7f090077;
-        public static final int btRegister=0x7f090069;
-        public static final int btSenders=0x7f090079;
+        public static final int btActive=0x7f09007c;
+        public static final int btCopy=0x7f09007a;
+        public static final int btDemoVideo=0x7f090070;
+        public static final int btFW2meEMailCopy=0x7f090092;
+        public static final int btForgotPassword=0x7f09006a;
+        public static final int btInboxinMailAdded=0x7f09007e;
+        public static final int btInboxinSenderDetail=0x7f090093;
+        public static final int btInvSpace=0x7f09007f;
+        public static final int btLogin=0x7f090069;
+        public static final int btOk=0x7f09007b;
+        public static final int btRegister=0x7f09006c;
+        public static final int btSenders=0x7f09007d;
         public static final int buyButton=0x7f090017;
         public static final int buy_now=0x7f09001c;
         public static final int buy_with_google=0x7f09001d;
@@ -2156,15 +2158,15 @@ containing a value of this type.
         public static final int dropdown=0x7f090031;
         public static final int edit_query=0x7f09004a;
         public static final int end=0x7f090033;
-        public static final int etEMail=0x7f090075;
-        public static final int etEmail=0x7f090065;
-        public static final int etFW2meEMail=0x7f09008b;
-        public static final int etPassword=0x7f090066;
-        public static final int etPassword2=0x7f09006d;
-        public static final int etSenderCreatedDT=0x7f09008d;
-        public static final int etSenderEMail=0x7f090089;
-        public static final int etSenderName=0x7f090088;
-        public static final int etTitle=0x7f090073;
+        public static final int etEMail=0x7f090079;
+        public static final int etEmail=0x7f090067;
+        public static final int etFW2meEMail=0x7f09008f;
+        public static final int etPassword=0x7f090068;
+        public static final int etPassword2=0x7f090071;
+        public static final int etSenderCreatedDT=0x7f090091;
+        public static final int etSenderEMail=0x7f09008d;
+        public static final int etSenderName=0x7f09008c;
+        public static final int etTitle=0x7f090077;
         public static final int expand_activities_button=0x7f090039;
         public static final int expanded_menu=0x7f09003f;
         public static final int footerLayout=0x7f090057;
@@ -2178,14 +2180,15 @@ containing a value of this type.
         public static final int icon=0x7f09003d;
         public static final int ifRoom=0x7f09002d;
         public static final int image=0x7f09003a;
-        public static final int iv_banner=0x7f090064;
+        public static final int iv_banner=0x7f090066;
+        public static final int iv_seperator=0x7f09006b;
         public static final int layout_InboxHeaderFrom=0x7f090059;
         public static final int layout_InboxHeaderTo=0x7f09005c;
         public static final int listMode=0x7f090023;
         public static final int list_item=0x7f09003c;
-        public static final int lvInbox=0x7f090062;
-        public static final int lvMyMailSenders=0x7f090086;
-        public static final int lvMyMails=0x7f09006b;
+        public static final int lvInbox=0x7f090064;
+        public static final int lvMyMailSenders=0x7f09008a;
+        public static final int lvMyMails=0x7f09006e;
         public static final int match_parent=0x7f090019;
         public static final int middle=0x7f090034;
         public static final int monochrome=0x7f090021;
@@ -2222,31 +2225,33 @@ containing a value of this type.
         public static final int test=0x7f090016;
         public static final int title=0x7f09003e;
         public static final int tool_bar=0x7f090058;
-        public static final int tvActive=0x7f09007e;
-        public static final int tvCreatedDT=0x7f090080;
-        public static final int tvEMail=0x7f090074;
-        public static final int tvFW2meEMail=0x7f09008a;
-        public static final int tvId=0x7f09007d;
+        public static final int tvActive=0x7f090082;
+        public static final int tvCreatedDT=0x7f090084;
+        public static final int tvEMail=0x7f090078;
+        public static final int tvFW2meEMail=0x7f09008e;
+        public static final int tvId=0x7f090081;
         public static final int tvInboxHeader=0x7f090061;
+        public static final int tvInboxHeader2=0x7f090062;
+        public static final int tvInboxHeader3=0x7f090063;
         public static final int tvInboxHeaderCount=0x7f090060;
         public static final int tvInboxHeaderCountTitle=0x7f09005f;
         public static final int tvInboxHeaderFrom=0x7f09005b;
         public static final int tvInboxHeaderFromTitle=0x7f09005a;
         public static final int tvInboxHeaderTo=0x7f09005e;
         public static final int tvInboxHeaderToTitle=0x7f09005d;
-        public static final int tvInboxitemCreatedDT=0x7f090071;
-        public static final int tvInboxitemFrom=0x7f09006f;
-        public static final int tvInboxitemID=0x7f09006e;
-        public static final int tvInboxitemSubject=0x7f090070;
-        public static final int tvNoMyMail=0x7f09006a;
-        public static final int tvNoSender=0x7f090085;
-        public static final int tvOrjSenderName=0x7f090083;
-        public static final int tvOrjTitle=0x7f09007f;
-        public static final int tvSenderActive=0x7f090081;
-        public static final int tvSenderCreatedDT=0x7f09008c;
-        public static final int tvSenderEMail=0x7f090084;
-        public static final int tvSenderName=0x7f090082;
-        public static final int tvTitle=0x7f090072;
+        public static final int tvInboxitemCreatedDT=0x7f090075;
+        public static final int tvInboxitemFrom=0x7f090073;
+        public static final int tvInboxitemID=0x7f090072;
+        public static final int tvInboxitemSubject=0x7f090074;
+        public static final int tvNoMyMail=0x7f09006d;
+        public static final int tvNoSender=0x7f090089;
+        public static final int tvOrjSenderName=0x7f090087;
+        public static final int tvOrjTitle=0x7f090083;
+        public static final int tvSenderActive=0x7f090085;
+        public static final int tvSenderCreatedDT=0x7f090090;
+        public static final int tvSenderEMail=0x7f090088;
+        public static final int tvSenderName=0x7f090086;
+        public static final int tvTitle=0x7f090076;
         public static final int up=0x7f090002;
         public static final int useLogo=0x7f09002a;
         public static final int withText=0x7f09002f;
@@ -2323,17 +2328,19 @@ containing a value of this type.
         public static final int gtm_analytics=0x7f060000;
     }
     public static final class string {
-        public static final int CreatedDT=0x7f08005d;
-        public static final int MailForwarded=0x7f080068;
-        public static final int Name=0x7f08005b;
-        public static final int NoMyMail=0x7f08005e;
-        public static final int NoSender=0x7f08005f;
-        public static final int OfflineUsage=0x7f080062;
-        public static final int PleaseWait=0x7f080061;
-        public static final int ResetPasswordLink=0x7f08006e;
-        public static final int SenderPaused=0x7f080059;
-        public static final int SenderResume=0x7f08005a;
-        public static final int YourMails=0x7f080060;
+        public static final int CreatedDT=0x7f080059;
+        public static final int DemoVideo=0x7f08006c;
+        public static final int Loading=0x7f08005e;
+        public static final int MailForwarded=0x7f080065;
+        public static final int Name=0x7f080057;
+        public static final int NoMyMail=0x7f08005a;
+        public static final int NoSender=0x7f08005b;
+        public static final int OfflineUsage=0x7f08005f;
+        public static final int PleaseWait=0x7f08005d;
+        public static final int ResetPasswordLink=0x7f08006b;
+        public static final int SenderPaused=0x7f080055;
+        public static final int SenderResume=0x7f080056;
+        public static final int YourMails=0x7f08005c;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f08002d;
@@ -2391,19 +2398,16 @@ containing a value of this type.
          */
         public static final int abc_toolbar_collapse_description=0x7f080030;
         public static final int accept=0x7f080002;
-        public static final int action_help=0x7f080052;
-        public static final int action_login=0x7f080049;
-        public static final int action_logout=0x7f08004c;
-        public static final int action_myhiddenmails=0x7f080051;
-        public static final int action_mymailsenders=0x7f08004d;
+        public static final int action_login=0x7f080048;
+        public static final int action_logout=0x7f08004a;
+        public static final int action_mymailsenders=0x7f08004b;
         public static final int action_register=0x7f080042;
-        public static final int action_settings=0x7f08004b;
         public static final int adViewInbox_unit_id=0x7f080040;
         public static final int adViewMailAdded_unit_id=0x7f08003d;
         public static final int adViewMain_unit_id=0x7f08003c;
         public static final int adViewSenderDetail_unit_id=0x7f08003f;
         public static final int adViewSenderList_unit_id=0x7f08003e;
-        public static final int addnewmail=0x7f080058;
+        public static final int addnewmail=0x7f080054;
         public static final int app_name=0x7f080041;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
@@ -2411,14 +2415,14 @@ containing a value of this type.
         /**  Brand name for Google [DO NOT TRANSLATE] 
          */
         public static final int auth_google_play_services_client_google_display_name=0x7f080006;
-        public static final int btActive1=0x7f080053;
-        public static final int btActive2=0x7f080054;
+        public static final int btActive1=0x7f08004f;
+        public static final int btActive2=0x7f080050;
         public static final int btCancel=0x7f080045;
         public static final int btCopy=0x7f080046;
-        public static final int btForgotPassword=0x7f08006d;
-        public static final int btInbox=0x7f080067;
+        public static final int btForgotPassword=0x7f08006a;
+        public static final int btInbox=0x7f080064;
         public static final int btOk=0x7f080044;
-        public static final int bt_login=0x7f08004a;
+        public static final int bt_login=0x7f080049;
         public static final int bt_register=0x7f080043;
         /**  Message of the notification to indicate an active cast display connection.  [CHAR LIMIT=80] NOTE: Same text as msgid="794424023757290105" 
          */
@@ -2544,29 +2548,28 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f080005;
         public static final int create_calendar_title=0x7f080004;
         public static final int decline=0x7f080003;
-        public static final int eMailConfReqDesc=0x7f080066;
-        public static final int eMailConfReqTitle=0x7f080065;
-        public static final int email=0x7f08004e;
-        public static final int emailaddresscopied=0x7f080048;
-        public static final int firstSenderName=0x7f080047;
-        public static final int fw2meemail=0x7f08005c;
-        public static final int lbActive=0x7f080055;
-        public static final int no=0x7f080064;
-        public static final int password=0x7f08004f;
-        public static final int password2=0x7f080050;
+        public static final int eMailConfReqDesc=0x7f080063;
+        public static final int eMailConfReqTitle=0x7f080062;
+        public static final int email=0x7f08004c;
+        public static final int emailaddresscopied=0x7f080047;
+        public static final int fw2meemail=0x7f080058;
+        public static final int lbActive=0x7f080051;
+        public static final int no=0x7f080061;
+        public static final int password=0x7f08004d;
+        public static final int password2=0x7f08004e;
         public static final int store_picture_message=0x7f080001;
         public static final int store_picture_title=0x7f080000;
-        public static final int title=0x7f080056;
-        public static final int tvInboxHeader=0x7f08006c;
-        public static final int tvInboxHeaderCountTitle=0x7f08006b;
-        public static final int tvInboxHeaderFromTitle=0x7f080069;
-        public static final int tvInboxHeaderToTitle=0x7f08006a;
-        public static final int undefined=0x7f080057;
+        public static final int title=0x7f080052;
+        public static final int tvInboxHeader=0x7f080069;
+        public static final int tvInboxHeaderCountTitle=0x7f080068;
+        public static final int tvInboxHeaderFromTitle=0x7f080066;
+        public static final int tvInboxHeaderToTitle=0x7f080067;
+        public static final int undefined=0x7f080053;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f08002b;
-        public static final int yes=0x7f080063;
+        public static final int yes=0x7f080060;
     }
     public static final class style {
         /** 
@@ -2927,8 +2930,7 @@ containing a value of this type.
     }
     public static final class xml {
         public static final int app_tracker=0x7f050000;
-        public static final int ecommerce_tracker=0x7f050001;
-        public static final int global_tracker=0x7f050002;
+        public static final int global_tracker=0x7f050001;
     }
     public static final class styleable {
         /**  ============================================ 

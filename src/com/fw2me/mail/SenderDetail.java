@@ -2,11 +2,13 @@ package com.fw2me.mail;
 
 import org.json.JSONObject;
 
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -74,7 +76,7 @@ public class SenderDetail extends ActionBarActivity {
         });
 		((Button) findViewById(R.id.btFW2meEMailCopy))
 		    .setOnClickListener(new OnClickListener() {
-			    @Override
+			    @TargetApi(Build.VERSION_CODES.HONEYCOMB) @Override
 			    public void onClick(View v) {
 				    int sdk = android.os.Build.VERSION.SDK_INT;
 				    if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
@@ -83,8 +85,7 @@ public class SenderDetail extends ActionBarActivity {
 					        .getText());
 				    } else {
 					    android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-					    android.content.ClipData clip = android.content.ClipData
-					        .newPlainText("text label",
+					    android.content.ClipData clip = android.content.ClipData.newPlainText("text label",
 					            ((EditText) findViewById(R.id.etFW2meEMail)).getText());
 					    clipboard.setPrimaryClip(clip);
 				    }
@@ -118,7 +119,7 @@ public class SenderDetail extends ActionBarActivity {
 
     Tracker t = ((GoogleAnalyticsApp) getApplication())
         .getTracker(TrackerName.APP_TRACKER);
-    t.setScreenName("Mail Gönderen Detay");
+    //t.setScreenName(getResources().getString(R.string.scr_SenderDetail));
     t.enableAdvertisingIdCollection(true);
     t.send(new HitBuilders.AppViewBuilder().build());
   }
@@ -168,7 +169,7 @@ public class SenderDetail extends ActionBarActivity {
 			//Log.i("hata bu mu", "baþlýyor");
 			if (SenderDetail.this!=null)
 			 PleaseWait = ProgressDialog.show(SenderDetail.this,
-					 getResources().getString(R.string.PleaseWait), getResources().getString(R.string.PleaseWait));
+					 getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
 			else Log.i("hata bu mu", "MyMailSenders.this is NULLLL");
 			//Log.i("hata bu mu", "Baþarýlý");
     }

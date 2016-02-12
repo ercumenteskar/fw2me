@@ -91,10 +91,12 @@ public class Inbox extends ActionBarActivity {
 
 		Tracker t = ((GoogleAnalyticsApp) getApplication())
 		    .getTracker(TrackerName.APP_TRACKER);
-		t.setScreenName(this.getTitle().toString());
+//		String pagetype = "?";
+//		pagetype = ToMail.equals("") ? " 1" : (FromMail.equals("") ? " 2" : " 3");
+//		pagetype = getResources().getString(R.string.scr_Inbox).concat(pagetype);
+		//t.setScreenName(pagetype);
 		t.enableAdvertisingIdCollection(true);
 		t.send(new HitBuilders.AppViewBuilder().build());
-
 	}
 
 	@Override
@@ -151,7 +153,7 @@ public class Inbox extends ActionBarActivity {
 			super.onPreExecute();
 			PleaseWait = ProgressDialog.show(Inbox.this, getResources()
 			    .getString(R.string.PleaseWait),
-			    getResources().getString(R.string.PleaseWait));
+			    getResources().getString(R.string.Loading));
 		}
 
 		@Override

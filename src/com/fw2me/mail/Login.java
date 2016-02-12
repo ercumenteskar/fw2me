@@ -2,11 +2,13 @@ package com.fw2me.mail;
 
 import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -23,7 +25,7 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 	GlobalTools	   glb	= new GlobalTools();
 	String mtype = "";
 
-	@Override
+	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
@@ -33,7 +35,13 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 		btLogin = (Button) findViewById(R.id.btLogin);
 		btRegister = (TextView) findViewById(R.id.btRegister);
 		Point size = new Point();
-		getWindowManager().getDefaultDisplay().getSize(size);
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+			getWindowManager().getDefaultDisplay().getSize(size);
+		} else { // Older device
+			size.x = getWindowManager().getDefaultDisplay().getWidth();
+			size.y = getWindowManager().getDefaultDisplay().getHeight();
+		}
+		//getWindowManager().getDefaultDisplay().getSize(size);
 		ImageView img = (ImageView) findViewById(R.id.iv_banner);
 		img.getLayoutParams().height = size.x/2;
 		img.getLayoutParams().width = size.x;
@@ -80,7 +88,7 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 		
 		protected void onPreExecute(){
 			super.onPreExecute();
-      PleaseWait = ProgressDialog.show(Login.this, getResources().getString(R.string.PleaseWait), getResources().getString(R.string.PleaseWait));
+      PleaseWait = ProgressDialog.show(Login.this, getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
 		}
 		
 		@Override

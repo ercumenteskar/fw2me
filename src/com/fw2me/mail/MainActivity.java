@@ -118,11 +118,10 @@ public class MainActivity extends ActionBarActivity {
 	    }
 			Tracker t = ((GoogleAnalyticsApp) getApplication())
 			    .getTracker(TrackerName.APP_TRACKER);
-			t.setScreenName(this.getTitle().toString());
+			//t.setScreenName("Ana Ekran"); // getResources().getString(R.string.scr_MainActivity)
 			t.enableAdvertisingIdCollection(true);
 			t.send(new HitBuilders.AppViewBuilder().build());
 		}
-
 	}
 
 	@Override
@@ -165,7 +164,6 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 
-
 	public static String sessionCode() {
 		return uls.getStoredUser().SessionCode;
 	}
@@ -197,16 +195,22 @@ public class MainActivity extends ActionBarActivity {
 		// startActivity(new Intent(MainActivity.this, PrefsActivity.class));
 		// break;
 		case R.id.action_logout:
+			((GoogleAnalyticsApp) getApplication())
+	    .getTracker(TrackerName.APP_TRACKER).send(new HitBuilders.EventBuilder().setCategory("Button").setAction("Click").setLabel("action_logout").build());
 			uls.setUserLoggedIn(false);
 			startActivity(new Intent(this, Login.class));
 			finish();
 			// onResume();
 			break;
 		case R.id.action_add:
+			((GoogleAnalyticsApp) getApplication())
+	    .getTracker(TrackerName.APP_TRACKER).send(new HitBuilders.EventBuilder().setCategory("Button").setAction("Click").setLabel("action_add").build());
 			new servisAT().execute("SetMyMail?Title=");
 			// AddNewEMail();
 			break;
 		case R.id.action_Inbox:
+			((GoogleAnalyticsApp) getApplication())
+	    .getTracker(TrackerName.APP_TRACKER).send(new HitBuilders.EventBuilder().setCategory("Button").setAction("Click").setLabel("action_Inbox").build());
 			Intent in = new Intent(getApplicationContext(), Inbox.class);
   		in.putExtra("FromMail", "");
   		in.putExtra("ToMail", "");
@@ -327,7 +331,7 @@ public class MainActivity extends ActionBarActivity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			PleaseWait = ProgressDialog.show(MainActivity.this,
-				getResources().getString(R.string.PleaseWait), getResources().getString(R.string.PleaseWait));
+				getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
 		}
 
 		@Override

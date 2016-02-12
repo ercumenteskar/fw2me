@@ -5,13 +5,14 @@
 
   <bool name="ga_autoActivityTracking">true</bool>
 
-  <screenName name="com.google.android.gms.analytics.samples.mobileplayground.ScreenviewFragment">
-    GoogleAnalyticsExample ScreenViewSampleScreen
-  </screenName>
-  <screenName name="com.google.android.gms.analytics.samples.mobileplayground.EcommerceFragment">
-    GoogleAnalyticsExample EcommerceSampleScreen
-  </screenName>
-
-  <string name="ga_trackingId">UA-70530711-1</string>
+  <screenName name="com.fw2me.mail.MainActivity">Ana Ekran</screenName>
+  <screenName name="com.fw2me.mail.Inbox">Gelen Kutusu</screenName>
+  <screenName name="com.fw2me.mail.Login">Giriş</screenName>
+  <screenName name="com.fw2me.mail.MailAddedActivity">Mail Detay</screenName>
+  <screenName name="com.fw2me.mail.MyMailSenders">Bağlantılar</screenName>
+  <screenName name="com.fw2me.mail.Register">Kayıt</screenName>
+  <screenName name="com.fw2me.mail.SenderDetail">Bağlantı Detay</screenName>
+  
+  <string name="ga_trackingId">UA-70530711-5</string>
 
 </resources>
