@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FW2me</string>
+    <string name="action_register">REGISTRO</string>
+    <string name="bt_register">Click For Registro</string>
+    <string name="btOk">Okay</string>
+    <string name="btCancel">Cancelar</string>
+    <string name="btCopy">Copiar</string>
+    <string name="emailaddresscopied">E-mail copiado</string>
+    <string name="action_login">LOGIN</string>
+    <string name="bt_login">Tengo una cuenta</string>
+    <string name="action_logout">Dejar</string>
+    <string name="action_mymailsenders">Contactos</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Clave</string>
+    <string name="password2">Clave (de nuevo)</string>
+    <string name="btActive1">Ajuste ACTIVO</string>
+    <string name="btActive2">Ajuste INACTIVA</string>
+    <string name="lbActive">(Inactiva)</string>
+    <string name="title">Título</string>
+    <string name="undefined">Intitulado</string>
+    <string name="addnewmail">Crear nuevo E-Mail</string>
+    <string name="SenderPaused">Contacto bloqueado. Usted no recibirá ningún email de %s</string>
+    <string name="SenderResume">Bloquear eliminado. Usted puede recibir email de %s</string>
+    <string name="Name">Nombre</string>
+    <string name="fw2meemail">Por correo email</string>
+    <string name="CreatedDT">Fecha de Creación</string>
+    <string name="NoMyMail">Usted no crea ningún email todavía. Para crear un nuevo signo + de un solo toque.</string>
+    <string name="NoSender">Sin correo electrónico entrante para este sitio.</string>
+    <string name="YourMails">Direcciones</string>
+    <string name="PleaseWait">Por favor espera</string>
+    <string name="Loading">Cargando</string>
+    <string name="OfflineUsage">Desconectado Uso</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="eMailConfReqTitle">E-Mail confirmación necesaria</string>
+    <string name="eMailConfReqDesc">Te hemos enviado un email a la dirección de email que ha introducido. Debe confirmar su suscripción haciendo clic en el enlace de ese email. Le gustaría enviar otro mail de confirmación? (Mail de confirmación anteriores no serán válidas)</string>
+    <string name="btInbox">Bandeja de entrada</string>
+    <string name="MailForwarded">Mail reenviado</string>
+    <string name="tvInboxHeaderFromTitle">De : </string>
+    <string name="tvInboxHeaderToTitle">A : </string>
+    <string name="tvInboxHeaderCountTitle">Conde email : </string>
+    <string name="tvInboxHeader">Usted puede optar por un email que desea FW</string>
+    <string name="btForgotPassword">Olvidaste tu contraseña?</string>
+    <string name="ResetPasswordLink">Su email de restablecimiento de contraseña ha sido enviada</string>
+    <string name="DemoVideo"><u>Lo que es FW2me? (Video Demo)</u></string>
+    
+</resources>
