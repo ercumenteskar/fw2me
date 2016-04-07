@@ -8,6 +8,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -41,6 +42,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
+
 // implements MIActivity 
 public class MainActivity extends ActionBarActivity {
 
@@ -71,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
 	private static final String	       PROPERTY_APP_VERSION	            = "appVersion";
 	private static final String	       TAG	                            = "FW2ME GCM";
 	GoogleCloudMessaging	             gcm;
-  public static boolean 						 showAds                          = true;
+  public static boolean 						 showAds                          = true; 
   AdView adView;
   
 	@Override
@@ -85,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
 		uls = new UserLocalStore(context);
 		lv = ((ListView) findViewById(R.id.lvMyMails));
 		connArray = new ArrayList<HashMap<String, String>>();
-		setTitle(R.string.YourMails);
+		setTitle(R.string.YourMails); 
 		// Pushy.listen(this);
 		if (userNo()!="")
 			showAds = uls.getStoredUser().ShowAds;
@@ -232,7 +234,7 @@ public class MainActivity extends ActionBarActivity {
 				jsonStr = new JSONObject(jsonStr).getJSONObject("SetMyMailResult")
 				    .getString("Obj");
 				JSONObject c = new JSONObject(jsonStr);
-				if (sid == "0")
+				if (sid.equals("0"))
 					OpenMyMail(c.getString(TAG_ID), c.getString(TAG_Title),
 					    c.getString(TAG_EMail) + "@" + const_maildomain, "1");
         try
@@ -241,14 +243,16 @@ public class MainActivity extends ActionBarActivity {
 	        {
 	        	new AlertDialog.Builder(MainActivity.this)
 	          .setTitle(getResources().getString(R.string.eMailConfReqTitle))
-	          .setMessage(getResources().getString(R.string.eMailConfReqDesc))
+	          .setMessage(getResources().getString(R.string.eMailConfReqDesc).replace("%s", uls.getStoredUser().EMail))
 	          .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-	              public void onClick(DialogInterface dialog, int which) { 
+	              @Override
+                public void onClick(DialogInterface dialog, int which) { 
 	                  new servisAT().execute("SendConfirmationCode?a=a");
 	              }
 	           })
 	          .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-	              public void onClick(DialogInterface dialog, int which) { 
+	              @Override
+                public void onClick(DialogInterface dialog, int which) { 
 	                  // do nothing
 	              }
 	           })
@@ -328,7 +332,8 @@ public class MainActivity extends ActionBarActivity {
     boolean fromCache = false;
     String komut = "";
     
-		protected void onPreExecute() {
+		@Override
+    protected void onPreExecute() {
 			super.onPreExecute();
 			PleaseWait = ProgressDialog.show(MainActivity.this,
 				getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
@@ -397,10 +402,10 @@ public class MainActivity extends ActionBarActivity {
 				try {
 					jsonObj = new JSONObject(result);
 					JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-					if (jo.getString("Id") != "0") {
+					if (!jo.getString("Id").equals("0")) {
 						err = true;
 						GlobalTools.ShowTost(jo.getString("Msg"));
-						if (jo.getString("Id") == "12") {
+						if (jo.getString("Id").equals("12")) {
 							startActivity(new Intent(MainActivity.this, Login.class));
 							finish();
 						}

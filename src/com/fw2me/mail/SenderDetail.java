@@ -6,7 +6,6 @@ import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,9 +59,11 @@ public class SenderDetail extends ActionBarActivity {
     ((EditText) findViewById(R.id.etSenderEMail)).setText(SenderEMail);
     ((EditText) findViewById(R.id.etFW2meEMail)).setText(fw2me_adr);
     ((EditText) findViewById(R.id.etSenderCreatedDT)).setText(CreatedDT);
-    ((Button)findViewById(R.id.btFW2meEMailCopy)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btActive)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btInboxinSenderDetail)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btFW2meEMailCopy)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btActive)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btInboxinSenderDetail)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btSendMailtoSender)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+    
     setTitle(OrjSenderName);
     ((Button) findViewById(R.id.btActive))
         .setText((Active.equals("1") ? R.string.btActive2 : R.string.btActive1));
@@ -105,6 +106,20 @@ public class SenderDetail extends ActionBarActivity {
 		    //finish();
 	    }
     });
+		
+		((Button) findViewById(R.id.btSendMailtoSender))
+    .setOnClickListener(new OnClickListener() {
+	    @Override
+	    public void onClick(View v) {
+				Intent intent = new Intent(Intent.ACTION_SEND);
+				intent.setType("plain/text");
+				intent.putExtra(Intent.EXTRA_EMAIL, new String[] { ((EditText) findViewById(R.id.etFW2meEMail)).getText().toString() });
+		//		intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+		//		intent.putExtra(Intent.EXTRA_TEXT, "mail body");
+				startActivity(Intent.createChooser(intent, ""));
+	    }
+    });
+		
 		
     adView = (AdView) findViewById(R.id.adViewSenderDetail);
     if (MainActivity.showAds) 
@@ -164,6 +179,7 @@ public class SenderDetail extends ActionBarActivity {
   public class servisAT extends AsyncTask<Object, Void, String> {
     ProgressDialog  PleaseWait;
 
+    @Override
     protected void onPreExecute() {
       super.onPreExecute();
 			//Log.i("hata bu mu", "baþlýyor");
@@ -196,10 +212,10 @@ public class SenderDetail extends ActionBarActivity {
       try {
         jsonObj = new JSONObject(result);
         JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-        if (jo.getString("Id") != "0") {
+        if (!jo.getString("Id").equals("0")) {
           // Response = "";
           GlobalTools.ShowTost(jo.getString("Msg"));
-           if (jo.getString("Id")=="12")
+           if (jo.getString("Id").equals("12"))
            {
              startActivity(new Intent(SenderDetail.this, Login.class));
              finish();

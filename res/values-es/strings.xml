@@ -34,7 +34,7 @@
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="eMailConfReqTitle">E-Mail confirmación necesaria</string>
-    <string name="eMailConfReqDesc">Te hemos enviado un email a la dirección de email que ha introducido. Debe confirmar su suscripción haciendo clic en el enlace de ese email. Le gustaría enviar otro mail de confirmación? (Mail de confirmación anteriores no serán válidas)</string>
+    <string name="eMailConfReqDesc">Te hemos enviado un email a la dirección de email que ha introducido. Debe confirmar su suscripción haciendo clic en el enlace de ese email. Le gustaría enviar otro mail de confirmación? (%s)</string>
     <string name="btInbox">Bandeja de entrada</string>
     <string name="MailForwarded">Mail reenviado</string>
     <string name="tvInboxHeaderFromTitle">De : </string>
@@ -44,5 +44,7 @@
     <string name="btForgotPassword">Olvidaste tu contraseña?</string>
     <string name="ResetPasswordLink">Su email de restablecimiento de contraseña ha sido enviada</string>
     <string name="DemoVideo"><u>Lo que es FW2me? (Video Demo)</u></string>
+    <string name="btSendMailtoSender">Enviar email</string>
+    
     
 </resources>

@@ -149,7 +149,8 @@ public class Inbox extends ActionBarActivity {
 		// Debug
 		ProgressDialog	PleaseWait;
 
-		protected void onPreExecute() {
+		@Override
+    protected void onPreExecute() {
 			super.onPreExecute();
 			PleaseWait = ProgressDialog.show(Inbox.this, getResources()
 			    .getString(R.string.PleaseWait),
@@ -178,10 +179,10 @@ public class Inbox extends ActionBarActivity {
 				try {
 					jsonObj = new JSONObject(result);
 					JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-					if (jo.getString("Id") != "0") {
+					if (!jo.getString("Id").equals("0")) {
 						err = true;
 						GlobalTools.ShowTost(jo.getString("Msg"));
-						if (jo.getString("Id") == "12") {
+						if (jo.getString("Id").equals("12")) {
 							startActivity(new Intent(Inbox.this, Login.class));
 							finish();
 						}

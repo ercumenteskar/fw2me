@@ -95,7 +95,8 @@ public class Register extends ActionBarActivity implements OnClickListener {
 		// Debug
 		ProgressDialog	PleaseWait;
 
-		protected void onPreExecute() {
+		@Override
+    protected void onPreExecute() {
 			super.onPreExecute();
 			PleaseWait = ProgressDialog.show(Register.this,
 			    getResources().getString(R.string.PleaseWait), getResources()
@@ -124,10 +125,10 @@ public class Register extends ActionBarActivity implements OnClickListener {
 			try {
 				// jsonObj = new JSONObject(result);
 				// JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-				// if (jo.getString("Id") != "0") {
+				// if (!jo.getString("Id").equals("0")) {
 				// // Response = "";
 				// GlobalTools.ShowTost(jo.getString("Msg"));
-				// // if (jo.getString("Id")=="12")
+				// // if (jo.getString("Id").equals("12"))
 				// // {
 				// // startActivity(new Intent(Register.this, Login.class));
 				// // finish();

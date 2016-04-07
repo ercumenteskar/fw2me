@@ -110,7 +110,7 @@ public class User {
 		try {
 			f = c.getDeclaredField(key);
 			if (f != null)
-	      f.set(this, (String)value);
+	      f.set(this, value);
     } catch (Exception e) {
       GlobalTools.ShowTost(e.getMessage());
     }
@@ -123,7 +123,7 @@ public class User {
 		try {
 			f = c.getDeclaredField(key);
 			if (f != null)
-	      val = (Integer)f.getInt(this);
+	      val = f.getInt(this);
 	    else return null;
     } catch (Exception e) {
       GlobalTools.ShowTost(e.getMessage());

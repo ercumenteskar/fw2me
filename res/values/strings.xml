@@ -5,6 +5,7 @@
     <string name="adViewSenderList_unit_id">ca-app-pub-5003722913489978/2595286843</string>
     <string name="adViewSenderDetail_unit_id">ca-app-pub-5003722913489978/4072020045</string>
     <string name="adViewInbox_unit_id">ca-app-pub-5003722913489978/7836934848</string>
+	<string name="facebook_app_id">1687663498182529</string>
     <string name="app_name">FW2me</string>
     <string name="action_register">REGISTER</string>
     <string name="bt_register">Click For Register</string>
@@ -39,7 +40,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="eMailConfReqTitle">E-Mail confirmation required</string>
-    <string name="eMailConfReqDesc">We have sent you an email to the email address you entered. You must confirm your subscription by clicking on the link in that email. Would you like to send another confirmation mail? (Previous confirmation mails will be invalid)</string>
+    <string name="eMailConfReqDesc">We have sent you an email to the email address you entered. You must confirm your subscription by clicking on the link in that email. Would you like to send another confirmation mail? (%s)</string>
     <string name="btInbox">Inbox</string>
     <string name="MailForwarded">Mail forwarded!</string>
     <string name="tvInboxHeaderFromTitle">From : </string>
@@ -49,4 +50,6 @@
     <string name="btForgotPassword">Forgot your password?</string>
     <string name="ResetPasswordLink">Your password reset mail has been sent</string>
     <string name="DemoVideo"><u>What is FW2me? (Demo Video)</u></string>
+    <string name="btSendMailtoSender">Send E-Mail</string>
+    
 </resources>

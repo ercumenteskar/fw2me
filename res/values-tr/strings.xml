@@ -34,7 +34,7 @@
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
     <string name="eMailConfReqTitle">E-Mail onayı gerekiyor</string>
-    <string name="eMailConfReqDesc">Mail adresinize onay maili gönderildi. FW2me adresi oluşturabilmek için bu mail içerisindeki linke tıklamanız gerekmektedir. Onay mailinin yeniden gönderilmesini ister misiniz? (Önceki onay maili geçersiz olacaktır)</string>
+    <string name="eMailConfReqDesc">Mail adresinize onay maili gönderildi. FW2me adresi oluşturabilmek için bu mail içerisindeki linke tıklamanız gerekmektedir. Onay mailinin yeniden gönderilmesini ister misiniz? (%s)</string>
     <string name="btInbox">Gelen Kutusu</string>
     <string name="MailForwarded">Mail adresinize gönderildi!</string>
     <string name="tvInboxHeaderFromTitle">Gönderen : </string>
@@ -44,5 +44,6 @@
     <string name="btForgotPassword">Parolanızı mı unuttunuz?</string>
     <string name="ResetPasswordLink">Parolanızı sıfırlamanız için mail gönderilmiştir</string>
     <string name="DemoVideo"><u>FW2me nedir? (Demo Video)</u></string>
+    <string name="btSendMailtoSender">Mail Gönder</string>
     
 </resources>

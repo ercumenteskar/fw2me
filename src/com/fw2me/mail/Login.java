@@ -86,7 +86,8 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 	public class servisAT extends AsyncTask<Object, Void, String> { //8081 // 61163 for Debug
 		ProgressDialog PleaseWait;
 		
-		protected void onPreExecute(){
+		@Override
+    protected void onPreExecute(){
 			super.onPreExecute();
       PleaseWait = ProgressDialog.show(Login.this, getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
 		}
@@ -116,7 +117,7 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 		    try {
 		      jsonObj = new JSONObject(result);
 					JSONObject jo = jsonObj.getJSONObject(mtype+"Result");
-					if (jo.getString("Id")!="0")
+					if (!jo.getString("Id").equals("0"))
 					{
 						err = true;
 						GlobalTools.ShowTost(jo.getString("Msg"));

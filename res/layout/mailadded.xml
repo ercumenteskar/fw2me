@@ -65,7 +65,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:textColor="#FFFFFFFF"/>
+            android:textColor="#FFFFFFFF"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/btOk"
@@ -73,7 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight=".5" 
-            android:textColor="#FFFFFFFF"/>
+            android:textColor="#FFFFFFFF"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"/>
    </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -87,7 +91,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:textColor="#FFFFFFFF"/>
+            android:textColor="#FFFFFFFF"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"/>
              
 
         <Button
@@ -96,7 +102,9 @@
             android:layout_height="wrap_content"
             android:text="@string/action_mymailsenders"
             android:layout_weight=".5" 
-            android:textColor="#FFFFFFFF"/>
+            android:textColor="#FFFFFFFF"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"/>
         
         
     </LinearLayout>
@@ -112,7 +120,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:textColor="#FFFFFFFF"/>
+            android:textColor="#FFFFFFFF"
+            android:layout_margin="5dp"
+            android:background="@drawable/button"/>
         
         <Button
             android:id="@+id/btInvSpace"
@@ -121,7 +131,9 @@
             android:layout_height="wrap_content"
             android:layout_weight=".5"
             android:visibility="invisible"
-            android:textColor="#FFFFFFFF"/>
+            android:layout_margin="5dp"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/button"/>
         
         
     </LinearLayout>

@@ -167,7 +167,8 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 		// Debug
 		ProgressDialog	PleaseWait;
 
-		protected void onPreExecute() {
+		@Override
+    protected void onPreExecute() {
 			super.onPreExecute();
 			// Log.i("hata bu mu", "baþlýyor");
 			// if (MyMailSenders.this!=null)
@@ -202,10 +203,10 @@ public class MyMailSenders extends ActionBarActivity { // implements MIActivity
 				try {
 					jsonObj = new JSONObject(result);
 					JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-					if (jo.getString("Id") != "0") {
+					if (!jo.getString("Id").equals("0")) {
 						err = true;
 						GlobalTools.ShowTost(jo.getString("Msg"));
-						if (jo.getString("Id") == "12") {
+						if (jo.getString("Id").equals("12")) {
 							startActivity(new Intent(MyMailSenders.this, Login.class));
 							finish();
 						}

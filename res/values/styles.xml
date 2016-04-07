@@ -10,7 +10,8 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
-
+	    <item name="colorControlActivated">@color/accent</item>
+        
     </style>
 
     <!-- Application theme. -->
@@ -18,4 +19,17 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowBackground">@color/windowBackground</item>
     </style>
+
 </resources>
+<!-- <resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
+ -->

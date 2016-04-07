@@ -6,17 +6,19 @@ import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.fw2me.mail.GoogleAnalyticsApp.TrackerName;
@@ -47,12 +49,31 @@ public class MailAddedActivity extends ActionBarActivity {
 		Title = (Title.equals("") ? "("+getResources().getString(R.string.undefined)+")": Title);
 		setTitle(Title);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    ((Button)findViewById(R.id.btCopy)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btOk)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btActive)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btSenders)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
-    ((Button)findViewById(R.id.btInboxinMailAdded)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btCopy)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btOk)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btActive)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btSenders)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
+//    ((Button)findViewById(R.id.btInboxinMailAdded)).getBackground().setColorFilter(0xFF1A237E, PorterDuff.Mode.DARKEN);
 
+    if(Build.VERSION.SDK_INT <= 0){//Build.VERSION_CODES.KITKAT) {
+
+	    Resources r = getApplicationContext().getResources();
+	    int mrgn = (int) TypedValue.applyDimension(
+	            TypedValue.COMPLEX_UNIT_DIP,
+	            5, 
+	            r.getDisplayMetrics()
+	    );
+	    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+	        android.view.ViewGroup.LayoutParams.WRAP_CONTENT,      
+	        android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+			);
+			params.setMargins(mrgn, mrgn, mrgn, mrgn);
+	    ((Button)findViewById(R.id.btCopy)).setLayoutParams(params);
+	    ((Button)findViewById(R.id.btOk)).setLayoutParams(params);
+	    ((Button)findViewById(R.id.btActive)).setLayoutParams(params);
+	    ((Button)findViewById(R.id.btSenders)).setLayoutParams(params);
+	    ((Button)findViewById(R.id.btInboxinMailAdded)).setLayoutParams(params);
+		}
     ((EditText) findViewById(R.id.etTitle)).setSelection(((EditText) findViewById(R.id.etTitle)).getText().length());
 		((Button) findViewById(R.id.btOk))
     .setOnClickListener(new OnClickListener() {
@@ -175,7 +196,8 @@ public class MailAddedActivity extends ActionBarActivity {
 																																	// Debug
 		ProgressDialog	PleaseWait;
 
-		protected void onPreExecute() {
+		@Override
+    protected void onPreExecute() {
 			super.onPreExecute();
 			 PleaseWait = ProgressDialog.show(MailAddedActivity.this,
 					 getResources().getString(R.string.PleaseWait), getResources().getString(R.string.Loading));
@@ -203,10 +225,10 @@ public class MailAddedActivity extends ActionBarActivity {
 			try {
 				jsonObj = new JSONObject(result);
 				JSONObject jo = jsonObj.getJSONObject(mtype + "Result");
-				if (jo.getString("Id") != "0") {
+				if (!jo.getString("Id").equals("0")) {
 					// Response = "";
 					GlobalTools.ShowTost(jo.getString("Msg"));
-					 if (jo.getString("Id")=="12")
+					 if (jo.getString("Id").equals("12"))
 					 {
 					 startActivity(new Intent(MailAddedActivity.this, Login.class));
 					 finish();
