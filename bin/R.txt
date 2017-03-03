@@ -551,7 +551,7 @@ int drawable common_signin_btn_text_normal_light 0x7f02006a
 int drawable common_signin_btn_text_pressed_dark 0x7f02006b
 int drawable common_signin_btn_text_pressed_light 0x7f02006c
 int drawable ic_launcher 0x7f02006d
-int drawable ic_launcher_dt 0x7f02006e
+int drawable ic_launcher_dt2 0x7f02006e
 int drawable ic_launcher_sb 0x7f02006f
 int drawable ic_plus 0x7f020070
 int drawable ic_plusone_medium_off_client 0x7f020071

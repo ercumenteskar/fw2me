@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FW2me</string>
     <string name="action_register">Kayıt ol</string>
     <string name="bt_register">Kayıt olmak için tıklayın</string>
     <string name="btOk">Tamam</string>
